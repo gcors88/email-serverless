@@ -1,0 +1,20 @@
+service: sls-email-service-gc
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-2'}
+  memorySize: 128
+  timeout: 3
+
+functions:
+  index:
+    handler: welcome.handle
+    description: send email
+    timeout: 8
+    events:
+      - http:
+          path: /
+          method: post
+          cors: false
