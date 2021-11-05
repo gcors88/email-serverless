@@ -6,8 +6,8 @@ const {
   const pug = require('pug')
   
   module.exports.handle = async (event) => {
-    const payload = typeof event.body === 'string'
-        ? JSON.parse(event.body) : event.body;
+    const payload = typeof event['Records'][0]['Sns']['Message'] === 'string'
+        ? JSON.parse(event['Records'][0]['Sns']['Message']) : event['Records'][0]['Sns']['Message'];
   
     try {
       console.log('\n \n');

@@ -161,7 +161,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/sls-email-service-gc/dev/1636053488417-2021-11-04T19:18:08.417Z/sls-email-service-gc.zip"
+          "S3Key": "serverless/sls-email-service-gc/dev/1636124444541-2021-11-05T15:00:44.541Z/sls-email-service-gc.zip"
         },
         "Handler": "welcome.handle",
         "Runtime": "nodejs12.x",
@@ -180,14 +180,14 @@
         "IndexLogGroup"
       ]
     },
-    "IndexLambdaVersionFRe6qZAQcbwAhnujdexg2LOmq1aYq46lw9oku8hQzs": {
+    "IndexLambdaVersionahDf83i4N1sRUQmDSCRImlaeNOJpYKLoFAMtQpSZwbw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "IndexLambdaFunction"
         },
-        "CodeSha256": "qDa7xa1StnpHVoLjBBFNFlWjHqrF/4Me8rlgY5hOJkM=",
+        "CodeSha256": "mYBUsSMki+q3vLOo0jPztTdV7/3vaffXdtuhm+37KdE=",
         "Description": "send email"
       }
     },
@@ -252,7 +252,7 @@
         "IndexLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1636053481156": {
+    "ApiGatewayDeployment1636124436308": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -314,7 +314,7 @@
     "IndexLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "IndexLambdaVersionFRe6qZAQcbwAhnujdexg2LOmq1aYq46lw9oku8hQzs"
+        "Ref": "IndexLambdaVersionahDf83i4N1sRUQmDSCRImlaeNOJpYKLoFAMtQpSZwbw"
       },
       "Export": {
         "Name": "sls-sls-email-service-gc-dev-IndexLambdaFunctionQualifiedArn"
